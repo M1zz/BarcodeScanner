@@ -13,7 +13,7 @@ enum CameraError: String {
     case invalidScannedValue = "스캐닝 된 값이 유효하지 않습니다. 이 앱은 EAN-8과 EAN-13을 스캔합니다."
 }
 
-protocol ScannerViewControllerDelegate: class {
+protocol ScannerViewControllerDelegate: AnyObject {
     func didFind(barcode: String)
     func didSurface(error: CameraError)
 }
@@ -42,7 +42,7 @@ final class ScannerViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         guard let previewLayer = previewLayer else {
-            scannerDelegate.didSurface(error: .invalidDeviceInput
+            scannerDelegate.didSurface(error: .invalidDeviceInput)
             return
         }
         previewLayer.frame = view.layer.bounds
@@ -109,6 +109,7 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             return
         }
 
+        //captureSession.stopRunning()
         scannerDelegate.didFind(barcode: barcode)
     }
 }

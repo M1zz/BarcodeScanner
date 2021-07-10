@@ -79,7 +79,6 @@
 		A5DEA7A526798B8E0003FD33 = {
 			isa = PBXGroup;
 			children = (
-				A592CC342696AA2E00E63304 /* ScannerView.swift */,
 				A5DEA7B026798B8E0003FD33 /* BarcodeScanner */,
 				A5DEA7C226798B910003FD33 /* BarcodeScannerTests */,
 				A5DEA7CD26798B910003FD33 /* BarcodeScannerUITests */,
@@ -106,6 +105,7 @@
 				A5DEA7BA26798B910003FD33 /* Info.plist */,
 				A5DEA7B726798B910003FD33 /* Preview Content */,
 				A5FAEC0E267991DE00A1A33D /* ScannerViewController.swift */,
+				A592CC342696AA2E00E63304 /* ScannerView.swift */,
 			);
 			path = BarcodeScanner;
 			sourceTree = "<group>";
